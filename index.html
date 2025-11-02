@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="map-container">
+        <div id="map"></div>
+        <button class="map-button add-button" onclick="openAddForm()">
+            Добавить объект
+        </button>
+    </div>
+
+    <div id="notification-container"></div>
+
+    <!-- Модальное окно для добавления метки -->
+    <div id="addFormModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeAddForm()">&times;</span>
+            <h2>Добавить новый объект</h2>
+            <form id="placemarkForm">
+                <div class="form-group">
+                    <label for="placemarkName">Название:</label>
+                    <input type="text" id="placemarkName" required>
+                </div>
+                <div class="form-group">
+                    <label for="placemarkDescription">Описание:</label>
+                    <textarea id="placemarkDescription" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="placemarkPhoto">Фото:</label>
+                    <input type="file" id="placemarkPhoto" accept="image/*">
+                </div>
+                <div class="form-group">
+                    <label>Координаты:</label>
+                    <div class="coords-display">
+                        <span id="coordLat">не выбраны</span>, 
+                        <span id="coordLng">не выбраны</span>
+                    </div>
+                </div>
+                <div class="form-buttons">
+                    <button type="button" onclick="closeAddForm()">Отмена</button>
+                    <button type="submit">Сохранить объект</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Всплывающие уведомления -->
+    <div id="notification" class="notification">
+        <div class="notification-content">
+            <span id="notificationText"></span>
+        </div>
+    </div>
+    <script src="config.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=YANDEX_MAPS_API_KEY&lang=ru_RU"></script>
+    <script src="script.js"></script>
+</body>
+</html>
