@@ -42,7 +42,7 @@ function initMap() {
             });
 
             notificationManager.success('Место выбрано! Заполните информацию о метке');
-            openFormModel();
+            openFormModal();
             isSelectingMode = false;
         }
     });
@@ -126,12 +126,12 @@ function openAddForm() {
     notificationManager.info('Кликните на карте для выбора места метки');
 }
 
-function openFormModel() {
-    document.getElementById('addFormModel').style.display = 'block';
+function openFormModal() {
+    document.getElementById('addFormModal').style.display = 'block';
 }
 
 function closeAddForm() {
-    document.getElementById('addFormModel').style.display = 'none';
+    document.getElementById('addFormModal').style.display = 'none';
     isSelectingMode = false;
     selectedCoords = null;
     if (tempPlacemark) {
@@ -199,10 +199,10 @@ window.onclick = function(event) {
     const modals = document.querySelectorAll('.modal');
     modals.forEach(modal => {
         if (event.target == modal) {
-            if (modal.id === 'addFormModel') {
+            if (modal.id === 'addFormModal') {
                 closeAddForm();
-            } else if (modal.id === 'authModel') {
-                closeAuthModel();
+            } else if (modal.id === 'authModal') {
+                closeAuthModal();
             }
         }
     });

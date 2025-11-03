@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
@@ -8,10 +11,10 @@
 </head>
 <body>
     <!-- Модальное окно авторизации -->
-    <div id="authModel" class="modal">
+    <div id="authModal" class="modal">
         <div class="modal-content auth-content">
             <div id="loginForm">
-                <span class="close" onclick="closeAuthModel()">&times;</span>
+                <span class="close" onclick="closeAuthModal()">&times;</span>
                 <h2>Вход в систему</h2>
                 <form id="authForm">
                     <div class="form-group">
@@ -32,7 +35,7 @@
             </div>
 
             <div id="registerForm" style="display: none;">
-                <span class="close" onclick="closeAuthModel()">&times;</span>
+                <span class="close" onclick="closeAuthModal()">&times;</span>
                 <h2>Регистрация</h2>
                 <form id="registerFormElement">
                     <div class="form-group">
@@ -85,7 +88,7 @@
         <div id="notification-container"></div>
 
         <!-- Модальное окно для добавления метки -->
-        <div id="addFormModel" class="modal">
+        <div id="addFormModal" class="modal">
             <div class="modal-content">
                 <span class="close" onclick="closeAddForm()">&times;</span>
                 <h2>Добавить новый объект</h2>

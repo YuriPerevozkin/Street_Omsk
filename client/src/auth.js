@@ -9,16 +9,16 @@ function initAuth() {
         register();
     });
 
-    showAuthModel();
+    showAuthModal();
 }
 
-function showAuthModel() {
-    document.getElementById('authModel').style.display = 'block';
+function showAuthModal() {
+    document.getElementById('authModal').style.display = 'block';
     document.getElementById('mainApp').style.display = 'none';
 }
 
-function closeAuthModel() {
-    document.getElementById('authModel').style.display = 'none';
+function closeAuthModal() {
+    document.getElementById('authModal').style.display = 'none';
 }
 
 function login() {
@@ -84,7 +84,7 @@ function register() {
 function logout() {
     currentUser = null;
     localStorage.removeItem('currentUser');
-    showAuthModel();
+    showAuthModal();
     notificationManager.info('Вы вышли из системы');
 }
 

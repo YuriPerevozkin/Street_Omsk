@@ -48,7 +48,7 @@ function init() {
 }
 
 function showMainApp() {
-    document.getElementById('authModel').style.display = 'none';
+    document.getElementById('authModal').style.display = 'none';
     document.getElementById('mainApp').style.display = 'block';
     document.getElementById('userGreeting').textContent = `Добро пожаловать, ${currentUser.name}!`;
     
