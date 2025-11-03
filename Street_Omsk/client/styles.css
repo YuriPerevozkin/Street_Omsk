@@ -70,11 +70,11 @@ body {
 
 .map-container {
     position: relative;
-    width: 94%;
+    width: 98%;
     height: 82vh;
-    margin: 24px auto;
+    margin: 12px auto;
     flex: 1;
-    border-radius: var(--border-radius);
+    border-radius: 20px;
     overflow: hidden;
     box-shadow: var(--shadow-medium);
 }
