@@ -256,3 +256,12 @@ body {
     width: 94%;
     padding: 24px;
 }
+
+.info-btn {
+    width: 15%;
+    height: 60pt;
+    background: url('images/account_info.png') center/contain no-repeat;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    float: left;
+}
