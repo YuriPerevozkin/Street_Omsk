@@ -7,7 +7,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Street Art Omsk</title>
+    <title>Street Omsk</title>
+    <link rel="icon" href="images/Spray_Can.webp" type="image/x-icon">
 </head>
 <body>
     <!-- Модальное окно авторизации -->
@@ -80,7 +81,7 @@
         <div class="map-container">
             <div id="map">
             <button class="map-button add-button" onclick="openAddForm()"></button>
-            </div/
+            </div>
         </div>
 
         <div id="notification-container"></div>
@@ -121,9 +122,10 @@
                             <span id="coordLng">не выбраны</span>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label for="placemarkPhoto">Фото:</label>
-                        <input type="file" id="placemarkPhoto" accept="image/*">
+                    <div class="photo-upload-container">
+                        <label for="placemarkPhoto"></label>
+                        <input type="file" id="placemarkPhoto" accept="image/*"
+                        onchange="handlePhoto(this)">
                     </div>
                     <div class="form-buttons">
                         <button type="submit">Сохранить объект</button>
