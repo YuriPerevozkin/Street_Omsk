@@ -175,9 +175,9 @@ class MapHandler(BaseHTTPRequestHandler):
 
     def serve_static_file(self):
         if self.path == '/':
-            file_path = '../client/index.html'
+            file_path = 'client/index.html'
         else:
-            file_path = '../client' + self.path
+            file_path = 'client' + self.path
         if os.path.exists(file_path) and os.path.isfile(file_path):
             ext = os.path.splitext(file_path)[1].lower()
             content_type = {
@@ -203,7 +203,7 @@ class MapHandler(BaseHTTPRequestHandler):
                 self.send_error(500, f"Error reading file: {e}")
         else:
             try:
-                with open('../client/index.html', 'rb') as f:
+                with open('client/index.html', 'rb') as f:
                     content = f.read()
                 self.send_response(200)
                 self.send_header('Content-Type', 'text/html')

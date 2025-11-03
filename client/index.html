@@ -8,10 +8,10 @@
 </head>
 <body>
     <!-- Модальное окно авторизации -->
-    <div id="authModal" class="modal">
+    <div id="authModel" class="modal">
         <div class="modal-content auth-content">
             <div id="loginForm">
-                <span class="close" onclick="closeAuthModal()">&times;</span>
+                <span class="close" onclick="closeAuthModel()">&times;</span>
                 <h2>Вход в систему</h2>
                 <form id="authForm">
                     <div class="form-group">
@@ -32,7 +32,7 @@
             </div>
 
             <div id="registerForm" style="display: none;">
-                <span class="close" onclick="closeAuthModal()">&times;</span>
+                <span class="close" onclick="closeAuthModel()">&times;</span>
                 <h2>Регистрация</h2>
                 <form id="registerFormElement">
                     <div class="form-group">
@@ -85,7 +85,7 @@
         <div id="notification-container"></div>
 
         <!-- Модальное окно для добавления метки -->
-        <div id="addFormModal" class="modal">
+        <div id="addFormModel" class="modal">
             <div class="modal-content">
                 <span class="close" onclick="closeAddForm()">&times;</span>
                 <h2>Добавить новый объект</h2>
@@ -133,6 +133,9 @@
     </div>
 
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=ваш_ключ" type="text/javascript"></script>
-    <script src="script.js"></script>
+    <script src="src/notifications.js"></script>
+    <script src="src/auth.js"></script>
+    <script src="src/map.js"></script>
+    <script src="src/main.js"></script>
 </body>
 </html>
